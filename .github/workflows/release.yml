@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies and generate release notes
         run: |
           npm install
-          npm run release
+          npm run release -- --starting-version ${{ github.ref_name }}
 
       - name: GitHub Release
         uses: softprops/action-gh-release@v2
